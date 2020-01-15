@@ -3,10 +3,7 @@
 <%= link_to '自分のプロフィールを編集', edit_profile_path(current_user.id), class: "btn btn-outline-secondary" %>
 
 <div class="row">
-<% 10.times do |i| %>
-<%# @profiles.each do |profile| %>
-<% profile = @profiles[0] %>
-
+<% @profiles.each do |profile| %>
     <div class="col-lg-4 col-md-6 col-sm-12">
       <a href="<%= profile_path(profile) %>">
         <div class="card">
