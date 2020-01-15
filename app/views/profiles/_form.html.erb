@@ -1,0 +1,27 @@
+
+<%= bootstrap_form_for(profile) do |form| %>
+      <% if profile.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+          <ul>
+          <% profile.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+  
+      <% end %>
+        <%= form.text_field :name, label: "名前", readonly: readonly %>
+        <%= form.file_field :image, label: "画像", readonly: readonly %>
+        <%= form.text_field :place, label: "場所", readonly: readonly %>
+        <%= form.text_field :belong_to, label: "所属", readonly: readonly %>
+        <%= form.text_area :description, label: "自己紹介", rows: 10, readonly: readonly %>
+        <%= form.text_field :github, label: "GitHub(ユーザー名)", readonly: readonly %>
+        <%= form.text_field :twitter, label: "Twitter(ユーザー名)", readonly: readonly %>
+        <%= form.text_field :facebook, label: "facebook(ユーザー名)", readonly: readonly %>
+        <%= form.text_field :web, label: "Web(http〜)", readonly: readonly %>
+      <% if readonly == false %>
+        <div class="actions">
+          <%= form.submit %>
+      <% end  %>
+    </div>
+<% end %>
