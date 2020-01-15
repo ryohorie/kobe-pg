@@ -798,7 +798,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.9.0)
-    excon (0.67.0)
+    excon (0.71.1)
     execjs (2.7.0)
     ffi (1.12.1)
     fog-aws (3.5.2)
