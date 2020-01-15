@@ -12,7 +12,7 @@
             <h5 class="card-title"><%= profile.name %></h5>
             <h6 class="card-subtitle mb-2 text-muted"><%= profile.belong_to %> / <%= profile.place %></h6>
             <img src="<%= profile.image %>" style="max-width:64px;max-height:64px;float:left;margin-right:4px;">
-            <p class="card-text"><%= profile.description.truncate(100) %></p>
+            <p class="card-text"><%= if profile.description.present? then profile.description.truncate(100) end %></p>
           </div>
           <div class="card-footer">
             <div style="float:right; font-size: 2em;">
